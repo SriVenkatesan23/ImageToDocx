@@ -1,8 +1,6 @@
 package ConvertToDocx;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-
 import net.sourceforge.tess4j.*;
 import java.util.Scanner;
 import java.io.FileOutputStream;
@@ -37,12 +35,9 @@ public class Scribe {
 			XWPFParagraph paragraph = document.createParagraph();
 			XWPFRun run=paragraph.createRun();
 			
-			
-			
 			run.setText(result);
 			document.write(out);
 			out.close();
-			
 			
 			System.out.println("Document written successully");
 			document.close();
